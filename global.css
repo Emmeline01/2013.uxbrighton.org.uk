@@ -543,7 +543,7 @@ section > div {
 	padding: 0.5rem 1rem;
 }
 
-#logo {
+/*#logo {
 	max-width: 23.125rem;
 	max-height: 3.5rem;
 	margin: 2rem 1rem 1rem 1rem;
@@ -565,10 +565,10 @@ section > div {
 
 .svg #logo span {
 	display: block;
-}
+}*/
 
 #title {
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 	line-height: 3rem;
 	font-weight: 100;
 	color: #C9003A;
@@ -730,11 +730,6 @@ section h2:after {
 	margin-left: 1rem !important;
 	}
 }
-@media only screen and (max-width: 32em) { /*nasty hack*/
-	.uxbrighton2013-logo {
-	font-size: 30px;
-	}
-}
 @media only screen and (min-width: 42em) {
 /* 42em =================================================== */
 
@@ -752,7 +747,7 @@ h1, section > div {
 	max-width: 40rem;
 }
 
-#logo {
+/*#logo {
 	width: 23.125rem;
 	height: 3.5rem;
 	margin: 2.75rem 0 2rem 0;
@@ -766,7 +761,7 @@ h1, section > div {
 
 .svg #logo {
 	background: transparent url(images/logo.svg) no-repeat top left;
-}
+}*/
 
 #title {
 	font-size: 5.5rem;
@@ -904,4 +899,9 @@ input[type=submit] {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 /* 2x =================================================== */
 
+}
+@media only screen and (max-width: 320px) { /*nasty hack*/
+	.uxbrighton2013-logo {
+	font-size: 34px !important;
+	}
 }
