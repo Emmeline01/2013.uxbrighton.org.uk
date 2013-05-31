@@ -629,17 +629,10 @@ section#calendar span {
 	font-size: 1.25rem;
 	font-weight: 500;
 	margin-right: 0;
-}
-
-section#calendar span:after {
-	content: ":";
-}
-
+	}
 section#calendar h2 {
 cursor: pointer;
-}
-
-
+	}
 section h2 {
 	margin-top: 1rem;
 	background-color: #4DBEFA;
@@ -658,13 +651,12 @@ section h2 {
 	color: white;
 	text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;
 	margin-bottom: 0;
-}
+	}
 
 section h2:after {
 	content: "\25BE";
-	margin-left: 1rem;	
-}
-
+	margin-left: 1rem;
+	}
 #calMenu {
 	z-index: 2000;
 	position: absolute;
