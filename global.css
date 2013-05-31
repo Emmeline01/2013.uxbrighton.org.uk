@@ -42,7 +42,7 @@ audio:not([controls]) {
  * Known issue: no IE6 support
  */
 
-[hidden] {
+.hidden, [hidden] {
 	display: none;
 }
 
@@ -835,6 +835,16 @@ section h2 {
 
 #calMenu {
 	top: 4.25rem;
+}
+
+.thanks {
+  width: 33.5rem;
+  height: 2rem;  
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #ff9610;
+	border-radius: 10px;
+  text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;	
 }
 
 input[type=text], input[type=email] {
