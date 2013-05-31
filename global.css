@@ -840,9 +840,10 @@ section h2 {
 .thanks {
 	width: 33.5rem;
 	height: 2rem;  
-	padding: 0.5rem 1rem;
+	/*padding: 0.5rem 1rem;*/
 	/*color: #fff;*/
-	background-color: rgba(253,159,68,0.5);
+	padding: 0.75rem 0.5rem 0.5rem 1rem;
+	background-color: hsla(55, 100%, 50%, 0.37);
 	/*border-radius: 10px;*/
 	/*text-shadow: rgba(0,0,0,0.5) 0px 1px 0px;*/	
 }
