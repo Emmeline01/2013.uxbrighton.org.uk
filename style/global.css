@@ -779,12 +779,12 @@ section#calendar span + div {
 	left: 1rem;
 	width: 2.063rem;
 	height: 2.125rem;
-	background: transparent url(images/calendar.png) no-repeat top left;
+	background: transparent url(../images/calendar.png) no-repeat top left;
 	background-size: 2.063rem 2.125rem;
 }
 
 .svg section#calendar > div:before {
-	background: transparent url(images/calendar.svg) no-repeat top left;
+	background: transparent url(../images/calendar.svg) no-repeat top left;
 }
 
 .svg section#email > div p + p:before {
@@ -794,12 +794,12 @@ section#calendar span + div {
 	left: -4.1rem;
 	width: 2.063rem;
 	height: 2.125rem;
-	background: transparent url(images/email.png) no-repeat top left;
+	background: transparent url(../images/email.png) no-repeat top left;
 	background-size: 2.063rem 2.125rem;
 }
 
 .svg section#email > div p + p:before {
-	background: transparent url(images/email.svg) no-repeat top left;
+	background: transparent url(../images/email.svg) no-repeat top left;
 }
 
 .svg section#twitter > div:before {
@@ -809,12 +809,12 @@ section#calendar span + div {
 	left: 1rem;
 	width: 2.063rem;
 	height: 2.125rem;
-	background: transparent url(images/twitter.png) no-repeat top left;
+	background: transparent url(../images/twitter.png) no-repeat top left;
 	background-size: 2.063rem 2.125rem;	
 }
 
 .svg section#twitter > div:before {
-	background: transparent url(images/twitter.svg) no-repeat top left;
+	background: transparent url(../images/twitter.svg) no-repeat top left;
 }
 
 section#email p {
