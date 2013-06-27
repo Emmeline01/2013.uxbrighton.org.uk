@@ -898,3 +898,8 @@ input[type=submit] {
 	font-size: 34px !important;
 	}
 }
+
+section#calendar {
+	border: none;
+	margin-top: -1rem;
+}
