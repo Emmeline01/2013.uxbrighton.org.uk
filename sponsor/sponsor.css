@@ -1,0 +1,136 @@
+body {
+	padding: 1rem;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-weight: 300 !important;
+	font-size: 14px;
+}
+
+h1, h2, h3 {
+	font-family: "Museo Slab", Rockwell, "American Typewriter", sans-serif;
+	font-weight: 500;
+}
+h1 {
+	color: #0b8ac1;
+}
+h2 {
+	color: #c70a3c;
+}
+h3 {
+	color: #fd9f44;
+}
+abbr {
+	border: none !important; /*why’s important required?*/
+}
+/* @group fronticepiece */
+
+
+
+/* @end */
+
+/* @group be-a-sponsor */
+
+
+
+/* @end */
+
+/* @group why-sponsor */
+
+
+
+/* @end */
+
+/* @group sponsor-levels */
+.sponsor-levels-as-table {
+	display: none;
+}
+.sponsor-level-heading {
+	font-size: 1rem;
+	padding: 0.5rem;
+	font-weight: 500;
+	text-align: center;
+}
+.sponsor-level-heading.silver {
+	color: rgba(0,0,0,0.82);
+	background: #ededed;
+}
+.sponsor-level-heading.gold {
+	color: #8b1900;
+	background: #fff2d2;
+}
+.sponsor-level-heading.platinum {
+	color: #001a32;
+	background: #daeded;
+}
+.sponsor-level-heading.extras {
+	color: rgba(0,0,0,0.71);
+	background: #95dfff;
+}
+.sponsor-levels ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.sponsor-levels li {
+	margin-bottom: 0.5rem;
+}
+.sponsor-levels p {
+	color: rgba(0,0,0,0.25);
+	font-weight: bold;
+}
+/* @end */
+
+/* @group quotes */
+
+
+
+/* @end */
+
+/* @group demographics */
+
+.demographics .value {
+	display: inline-block;
+	width: 4rem;
+	color: #0b8ac1;
+}
+.demographics ul {
+	padding-left: 0;
+}
+.demographics li {
+	list-style-type: none;
+}
+.demographics ul > ul {
+	padding-left: 4rem !important; /*why’s important required?*/
+	color: rgba(0,0,0,0.5);
+}
+.demographics ul > ul li {
+	display: inline;
+}
+.demographics ul > ul li:after {
+	content: ", ";
+}
+.demographics ul > ul li:last-child:after {
+	content: "";
+}
+
+/* @end */
+
+/* @group speakers */
+
+#previous-speakers {
+	background: beige;
+}
+#this-years-speakers {
+	background: paleturquoise;
+}
+
+/* @end */
+
+/* @group footer */
+
+footer {
+	color: rgba(0,0,0,0.13);
+	font-size: 0.75rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* @end */
