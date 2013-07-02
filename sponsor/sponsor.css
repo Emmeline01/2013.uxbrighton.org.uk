@@ -23,14 +23,33 @@ abbr {
 }
 /* @group fronticepiece */
 .frontispiece‎ {
-	background-color: rgba(255,38,38,0.07);
+	background-color: black;
 	padding: 1rem;
 	margin: -1rem;
+	text-align: center;
 }
-.frontispiece‎ {
-	
+.uxbrighton2013-logo {
+	width: 15rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0rem;
+	margin-top: 4rem;
 }
-
+.frontispiece‎ .tagline {
+	font-size: 1.5rem;
+	margin-top: 1.25rem;
+}
+.frontispiece‎ .location {
+	color: rgba(11,138,193,0.79);
+	font-size: 0.9rem;
+	display: none;
+}
+.be-a-sponsor {
+	color: #ffa039;
+	font-size: 2.5rem;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
 /* @end */
 
 /* @group be-a-sponsor */
