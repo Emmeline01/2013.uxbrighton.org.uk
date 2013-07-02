@@ -56,7 +56,7 @@ td:last-child {
 }
 .frontispiece‎ .location {
 	color: rgba(11,138,193,0.79);
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 	display: none;
 }
 .be-a-sponsor {
@@ -76,9 +76,12 @@ td:last-child {
 }
 .why-sponsor ol {
 	margin-top: 1.5rem;
+	padding-left: 0.25rem;
+	padding-right: 1.25rem;
 }
 .why-sponsor li {
 	margin-bottom: 1rem;
+	margin-left: 1rem;
 }
 
 /* @end */
