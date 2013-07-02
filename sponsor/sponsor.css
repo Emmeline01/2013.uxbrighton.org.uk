@@ -22,8 +22,14 @@ abbr {
 	border: none !important; /*why’s important required?*/
 }
 /* @group fronticepiece */
-
-
+.frontispiece‎ {
+	background-color: rgba(0,0,0,0.12);
+	padding: 1rem;
+	margin: -1rem;
+}
+.frontispiece‎ {
+	
+}
 
 /* @end */
 
