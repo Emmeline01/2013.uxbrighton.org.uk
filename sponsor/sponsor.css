@@ -6,7 +6,7 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: "Museo Slab", Rockwell, "American Typewriter", sans-serif;
+	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
 	font-weight: 500;
 }
 h1 {
@@ -14,6 +14,7 @@ h1 {
 }
 h2 {
 	color: #c70a3c;
+	text-align: center;
 }
 h3 {
 	color: #fd9f44;
@@ -24,9 +25,16 @@ abbr {
 hr {
 	border: none;
 	border-top: 1px solid rgba(0,0,0,0.1);
-	margin: 1rem -1rem 0;
+	margin: 1rem -1rem;
 }
-
+td {
+	vertical-align: top;
+	padding-right: 1rem;
+	padding-bottom: 0.75rem;
+}
+td:last-child {
+	padding-right: 0;
+}
 /* @group fronticepiece */
 
 .frontispiece‎ {
@@ -146,7 +154,12 @@ hr {
 .demographics ul > ul li:last-child:after {
 	content: "";
 }
-
+.demographics h3 {
+	margin-bottom: 0.25rem;
+}
+.demographics ul {
+	margin-top: 0;
+}
 /* @end */
 
 /* @group speakers */
