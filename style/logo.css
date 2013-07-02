@@ -20,13 +20,13 @@
 	-ms-transform:		scale(1.25,1);
 	-o-transform:		scale(1.25,1);
 	transform: 			scale(1.25,1);
-	margin-left:		0.14ex;
-	margin-right:		0.14ex;
+	margin-left: 0.14ex;
+	margin-right: 0.14ex;
 	}
 .uxbrighton2013-logo-brighton {
-	color:				#C9003A;
-	margin-left:		-0.155em;
-	letter-spacing:		-0.04em;
+	color: #C9003A;
+	margin-left: -0.155em;
+	letter-spacing: -0.04em;
 	}
 .uxbrighton2013-logo-year {
 	color: #FFA039;
@@ -35,7 +35,13 @@
 	margin-left: -0.195em;
 	}
 .uxbrighton2013-logo.fifty-px {
-	font-size: 50px;
+	font-size: 			50px;
+}
+.uxbrighton2013-logo.white * {
+	color: #fff !important;
+}
+.uxbrighton2013-logo.black * {
+	color: #000 !important;
 }
 /*@media screen and (min-width: 735px){
 	.uxbrighton2013-logo.banner-logo {

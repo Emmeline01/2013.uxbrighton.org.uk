@@ -23,7 +23,7 @@ abbr {
 }
 /* @group fronticepiece */
 .frontispiece‎ {
-	background-color: #0097ff;
+	background-color: rgba(255,38,38,0.07);
 	padding: 1rem;
 	margin: -1rem;
 }
