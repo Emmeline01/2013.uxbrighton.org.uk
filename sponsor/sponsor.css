@@ -35,6 +35,11 @@ td {
 td:last-child {
 	padding-right: 0;
 }
+section, footer {
+	padding: 1rem;
+	margin: inherit -1rem;
+	clear: both;
+}
 /* @group fronticepiece */
 
 .frontispiece‎ {
@@ -53,6 +58,7 @@ td:last-child {
 .frontispiece‎ .tagline {
 	font-size: 1.5rem;
 	margin-top: 1.25rem;
+	font-weight: 600;
 }
 .frontispiece‎ .location {
 	color: rgba(11,138,193,0.79);
@@ -88,7 +94,7 @@ td:last-child {
 
 /* @group sponsor-levels */
 .sponsor-levels-as-table {
-	display: none;
+	display: nonsdde;
 }
 .sponsor-level-heading {
 	font-size: 1rem;
@@ -127,7 +133,11 @@ td:last-child {
 
 /* @group quotes */
 
-
+.quotes {
+	background-color: rgba(255,160,57,0.14);
+	padding: 1rem;
+	margin: -1rem;
+}
 
 /* @end */
 
@@ -135,8 +145,10 @@ td:last-child {
 
 .demographics .value {
 	display: inline-block;
-	width: 4rem;
+	width: 2rem;
 	color: #0b8ac1;
+	text-align: right;
+	padding-right: 1rem;
 }
 .demographics ul {
 	padding-left: 0;
@@ -145,7 +157,7 @@ td:last-child {
 	list-style-type: none;
 }
 .demographics ul > ul {
-	padding-left: 4rem !important; /*why’s important required?*/
+	padding-left: 3rem !important; /*why’s important required?*/
 	color: rgba(0,0,0,0.5);
 }
 .demographics ul > ul li {
@@ -163,6 +175,16 @@ td:last-child {
 .demographics ul {
 	margin-top: 0;
 }
+.markets, .companies {
+}
+
+/*.demographics > .gender,*/
+/*.demographics > .company-size,*/
+.demographics > .markets,
+.demographics > .companies {
+	float: left;
+	width: 50%;
+}
 /* @end */
 
 /* @group speakers */
@@ -179,10 +201,15 @@ td:last-child {
 /* @group footer */
 
 footer {
-	color: rgba(0,0,0,0.13);
+	color: rgba(94,156,168,0.67);
 	font-size: 0.75rem;
 	text-align: center;
 	font-weight: bold;
+	padding-top: 3rem;
+}
+footer a {
+	color: inherit;
+	text-decoration: none;
 }
 
 /* @end */
