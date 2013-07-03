@@ -27,12 +27,12 @@ hr {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	margin: 1rem -1rem;
 }
-td {
+td, th {
 	vertical-align: top;
-	padding-right: 1rem;
-	padding-bottom: 0.75rem;
+	padding: 0.33rem;
 }
-td:last-child {
+td:last-child,
+th:last-child {
 	padding-right: 0;
 }
 section, footer {
@@ -94,13 +94,14 @@ section, footer {
 
 /* @group sponsor-levels */
 .sponsor-levels-as-table {
-	display: nonsdde;
+	display: none;
 }
 .sponsor-level-heading {
 	font-size: 1rem;
 	padding: 0.5rem;
 	font-weight: 500;
 }
+
 .sponsor-level-heading.silver {
 	color: rgba(0,0,0,0.82);
 	background: #ededed;
@@ -113,26 +114,42 @@ section, footer {
 	color: #001a32;
 	background: #daeded;
 }
-.sponsor-level-heading.extras {
-	color: rgba(0,0,0,0.71);
-	background: #95dfff;
-}
-.sponsor-levels ul {
+
+/* @group sponsor-levels-as-lists */
+
+.sponsor-lelevs-as-lists .sponsor-levels ul {
 	list-style-type: none;
 	padding-left: 0;
 }
-.sponsor-levels li {
+.sponsor-lelevs-as-lists .sponsor-levels li {
 	margin-bottom: 0.5rem;
+}
+
+/* @end */
+.sponsor-level-heading.extras {
+	color: rgba(0,0,0,0.71);
+	background: #95dfff;
 }
 .sponsor-levels p {
 	color: rgba(0,0,0,0.25);
 	font-weight: bold;
 }
-.sponsor-levels .n {
+.sponsor-lelevs-as-lists .sponsor-levels .n {
 	margin-right: 1rem;
 }
-.sponsor-levels .price {
+.sponsor-lelevs-as-lists .sponsor-levels .price {
 	float: right;
+}
+.sponsor-levels td {
+	text-align: center;
+	font-weight: bold;
+}
+.sponsor-levels th[scope=row] {
+	font-weight: inherit;
+	text-align: left;
+}
+.sponsor-levels th.sponsor-level-heading {
+	width: 5rem;
 }
 /* @end */
 
@@ -219,9 +236,15 @@ footer a {
 
 /* @end */
 
-@media (min-width: 25rem) {
-  .widow {
-	white-space: nowrap;
-    background: red;
+@media (min-width: 30rem) {
+	.widow {
+		white-space: nowrap;
+	}
+	
+	.sponsor-levels-as-table {
+		display: block;
+	}
+	.sponsor-levels-as-lists {
+		display: none;
 }
 }
