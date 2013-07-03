@@ -37,7 +37,7 @@ th:last-child {
 }
 section, footer {
 	padding: 1rem;
-	margin: inherit -1rem;
+	margin: 0 -1rem;
 	clear: both;
 }
 .thing {
@@ -159,6 +159,9 @@ section, footer {
 
 /* @group demographics */
 
+.demographics {
+	background-color: rgba(0,0,0,0.03);
+}
 .demographics .value {
 	display: inline-block;
 	width: 2rem;
@@ -191,8 +194,6 @@ section, footer {
 .demographics ul {
 	margin-top: 0;
 }
-.markets, .companies {
-}
 
 /*.demographics > .gender,*/
 /*.demographics > .company-size,*/
@@ -221,7 +222,10 @@ section, footer {
 	padding: 1rem;
 	margin: -1rem;
 }
-
+blockquote {
+	margin-right: 0;
+	font-family: "Times New Roman", Times, serif;
+}
 cite {
 	font-style: normal;
 }
@@ -234,11 +238,13 @@ cite:before {
 /* @group footer */
 
 footer {
-	color: rgba(94,156,168,0.67);
+	color: rgba(0,0,0,0.25);
 	font-size: 0.75rem;
 	text-align: center;
 	font-weight: bold;
 	padding-top: 3rem;
+	font-family: Rockwell, sans-serif;
+	font-weight: 700;
 }
 footer a {
 	color: inherit;
