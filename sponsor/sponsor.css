@@ -4,6 +4,7 @@ body {
 	font-weight: 300 !important;
 	font-size: 14px;
 	line-height: 1.5;
+	background-color: #fafafa;
 }
 
 h1, h2, h3 {
@@ -45,13 +46,59 @@ section, footer {
 .thing {
 	font-style: italic;
 }
+
+/* @group sponsor-call-to-action */
+
+.sponsor-call-to-action {
+	background: #000;
+	padding: 0.1rem 1rem;
+	line-height: 1.5;
+	color: white;
+	text-align: center;
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+.sponsor-call-to-action .avatar {
+	display: none;
+}
+.sponsor-call-to-action a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+@media (min-width: 30rem) {
+	.sponsor-call-to-action {
+		display: none;
+	}
+	.sponsor-call-to-action.primary {
+		display: block;
+		position: fixed;
+		bottom: 2rem;
+		left: auto;
+		right: auto;
+		margin: 0;
+		width: 50%;
+		padding: 0;
+		border: 5px solid white;
+	}
+}
+/* @end */
+
 @media (min-width: 30rem) {
 	.widow {
 		white-space: nowrap;
 	}
 }
+@media (min-width: 1000px) {
+	p, li {
+		line-height: 2;
+	}
+	body {
+		font-size: 16px;
+		margin-bottom: 1.5rem !important;
+	}
+}
 /* @group fronticepiece */
-
 .frontispiece‎ {
 	background-color: black;
 	margin-top: -1rem;
@@ -99,16 +146,15 @@ section, footer {
 
 
 /* @group why-sponsor */
-
 .why-sponsor ol {
 	margin-top:		1.5rem;
 	padding-left:	0.25rem;
 	padding-right:	1.25rem;
-}
+	}
 .why-sponsor li {
 	margin-bottom:	1rem;
 	margin-left:	1rem;
-}
+	}
 
 /* @end */
 
@@ -123,25 +169,32 @@ section, footer {
 	font-size: 1rem;
 	padding: 0.5rem;
 	font-weight: 500;
+	}
+.sponsor-level-heading.gamma {
+	color: #ffa039;
+	background-color: rgba(0,0,0,0.05);
 }
-
-.sponsor-level-heading.silver {
-	color: rgba(0,0,0,0.82);
-	background: #ededed;
-}
-.sponsor-level-heading.gold {
-	color: #5c2100;
-	background: #fff2d2;
-}
-.sponsor-level-heading.platinum {
-	color: #001a32;
-	background: #daeded;
-}
-
+.sponsor-level-heading.beta {
+	color: #c90039;
+	background-color: rgba(0,0,0,0.05);
+	}
+.sponsor-level-heading.alpha {
+	color: #0b8ac1;
+	background-color: rgba(0,0,0,0.05);
+	}
 .sponsor-levels .extras {
 	margin-top: 2rem;
-}
-
+	}
+.sponsor-levels .price {
+	float: right;
+	}
+.sponsor-levels p {
+	color: rgba(0,0,0,0.33);
+	font-weight: bold;
+	margin-top: -0.75rem;
+	text-align: center;
+	line-height: 1.3;
+	}
 /* @group Lists */
 
 .sponsor-levels ul {
@@ -154,40 +207,43 @@ section, footer {
 .sponsor-levels li:before {
 	content: "✔";
 	display: inline-block;
-	width: 3.25rem;
-	text-align: center;
+	width: 4rem;
+	text-align: right;
+	padding-right: 1rem;
 	color: #0b8ac1;
 }
 .sponsor-lelevs-as-lists .n {
 	margin-right: 1rem;
 }
-.sponsor-levels p {
-	color: rgba(0,0,0,0.33);
-	font-weight: bold;
-	margin-top: -0.75rem;
-	text-align: center;
-	line-height: 1.3;
-}
-.sponsor-levels .price {
-	float: right;
-}
 
 /* @end */
 
 /* @group Table */
-
+.sponsor-levels {
+	margin-left: auto;
+	margin-right: auto;
+}
 .sponsor-levels td {
 	text-align: center;
 	font-weight: bold;
+	color: #c90039;
+	background-color: #fefffe;
 }
 .sponsor-levels th[scope=row] {
 	font-weight: inherit;
 	text-align: left;
+	background-color: #fefffe;
 }
 .sponsor-levels th.sponsor-level-heading {
 	min-width: 5rem;
 }
-
+th.sponsor-level-heading {
+	text-align: center;
+}
+tr.divider th,
+tr.divider td {
+	border-top: 1px solid rgba(0,0,0,0.05);
+}
 /* @end */
 
 @media (min-width: 30rem) {
@@ -201,28 +257,30 @@ section, footer {
 
 /* @end */
 
-/* @group sponsor-call-to-action */
-
-.sponsor-call-to-action {
-	background: #000;
-	padding: 0.1rem 1rem;
-	line-height: 1.5;
-	color: white;
-	text-align: center;
-	margin-left: -1rem;
-	margin-right: -1rem;
+@media (min-width: 1000px) { /*put sponsor levels beside reasons to sponsor*/
+	section.why-sponsor {
+		width: 30%;
+		padding: 4rem;
+		float: left;
+		margin-right: 0;
+	}
+	section.why-sponsor h2,
+	section.sponsor-levels h2 {
+		text-align: left;
+	}
+	.sponsor-call-to-action {
+		display: none !important;
+	}
+	section.sponsor-levels {
+		width: 40%;
+		padding: 4rem;
+		display: inline-block;
+		margin-left: 0;
+	}
 }
-.sponsor-call-to-action .avatar {
-	display: none;
-}
-.sponsor-call-to-action a {
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-}
-/* @end */
 
 /* @group demographics */
+
 .demographics h3 {
 	text-align: center;
 }
@@ -284,6 +342,16 @@ section, footer {
 	.demographics .markets,
 	.demographics .companies {
 		text-align: left;
+	}
+}
+@media (min-width: 1000px) {
+	.demographics div {
+		display: inline-block;
+		width: 18rem;
+		vertical-align: top;
+	}
+	.demographics .value {
+		width: 3rem;
 	}
 }
 /* @end */
