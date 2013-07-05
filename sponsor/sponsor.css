@@ -382,12 +382,17 @@ tr.divider td {
 	border-top: 1px solid rgba(0,0,0,0.25);
 	padding: 1rem;
 	margin: -1rem;
+	text-align: center;
 }
 blockquote {
 	margin-right: 0;
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
-	max-width: 30rem;
+	text-align: left;
+		max-width: 30rem;
+		display: inline-block;
+		vertical-align: top;
+
 }
 cite {
 	margin-bottom: 1rem;
@@ -396,14 +401,11 @@ cite {
 }
 cite:before {
 	content: "—";
-	display: inline-block;
 	width: 1.25rem;
 }
 .long {
 	display: none;
 }
-
-/* @end */
 
 /* @group footer */
 footer {
