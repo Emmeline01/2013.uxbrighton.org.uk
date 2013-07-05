@@ -387,6 +387,7 @@ blockquote {
 	margin-right: 0;
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
+	max-width: 30rem;
 }
 cite {
 	margin-bottom: 1rem;
