@@ -34,6 +34,9 @@ td, th {
 	vertical-align: top;
 	padding: 0.33rem;
 }
+th * {
+	float: inherit !important;
+}
 td:last-child,
 th:last-child {
 	padding-right: 0;
@@ -352,6 +355,12 @@ tr.divider td {
 	}
 	.demographics .value {
 		width: 3rem;
+	}
+	.demographics > span {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1200px;
 	}
 }
 /* @end */
