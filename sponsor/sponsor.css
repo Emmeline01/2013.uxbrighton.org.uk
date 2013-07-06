@@ -27,12 +27,15 @@ hr {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	margin: 1rem -1rem;
 }
-th {
+th[scope="column"] {
 	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
 }
 td, th {
 	vertical-align: top;
-	padding: 0.33rem;
+	padding: 0.5rem;
+}
+thead th {
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 th * {
 	float: inherit !important;
@@ -46,17 +49,25 @@ section, footer {
 	margin: 0 -1rem;
 	clear: both;
 }
+section {
+	border-top: 1px solid rgba(0,0,0,0.05) !important;
+}
 .thing {
 	font-style: italic;
+}
+
+@media (min-width: 30rem) {
+	.widow {
+		white-space: nowrap;
+	}
 }
 
 /* @group sponsor-call-to-action */
 
 .sponsor-call-to-action {
-	background: #000;
+	background: #ffa039;
 	padding: 0.1rem 1rem;
 	line-height: 1.5;
-	color: white;
 	text-align: center;
 	margin-left: -1rem;
 	margin-right: -1rem;
@@ -66,8 +77,9 @@ section, footer {
 }
 .sponsor-call-to-action a {
 	color: white;
-	font-weight: bold;
+	font-weight: normal;
 	text-decoration: none;
+	letter-spacing: 0.05rem;
 }
 @media (min-width: 30rem) {
 	.sponsor-call-to-action {
@@ -76,26 +88,15 @@ section, footer {
 	.sponsor-call-to-action.primary {
 		display: block;
 		position: fixed;
-		bottom: 2rem;
-		left: auto;
-		right: auto;
+		top: 0;
+		left: 0;
+		right: 0;
 		margin: 0;
-		width: 50%;
 		padding: 0;
-		border: 5px solid white;
 	}
 }
 /* @end */
-
-@media (min-width: 30rem) {
-	.widow {
-		white-space: nowrap;
-	}
-}
 @media (min-width: 1000px) {
-	p, li {
-		line-height: 2;
-	}
 	body {
 		font-size: 16px;
 		margin-bottom: 1.5rem !important;
@@ -147,23 +148,13 @@ section, footer {
 }
 /* @end */
 
-
-/* @group why-sponsor */
-.why-sponsor ol {
-	margin-top:		1.5rem;
-	padding-left:	0.25rem;
-	padding-right:	1.25rem;
-	}
-.why-sponsor li {
-	margin-bottom:	1rem;
-	margin-left:	1rem;
-	}
-
-/* @end */
-
 /* @group sponsor-levels */
 .sponsor-levels {
 	border-top: 1px solid rgba(0,0,0,0.25);
+	text-align: center;
+}
+.sponsor-levels ul {
+	text-align: left;
 }
 .sponsor-levels-as-table {
 	display: none;
@@ -210,7 +201,7 @@ section, footer {
 .sponsor-levels li:before {
 	content: "✔";
 	display: inline-block;
-	width: 4rem;
+	width: 1.5rem;
 	text-align: right;
 	padding-right: 1rem;
 	color: #0b8ac1;
@@ -229,8 +220,8 @@ section, footer {
 .sponsor-levels td {
 	text-align: center;
 	font-weight: bold;
-	color: #c90039;
-	background-color: #fefffe;
+	/*color: #c90039; red on white ticks
+	background-color: #fefffe;*/
 }
 .sponsor-levels th[scope=row] {
 	font-weight: inherit;
@@ -247,6 +238,9 @@ tr.divider th,
 tr.divider td {
 	border-top: 1px solid rgba(0,0,0,0.05);
 }
+.sponsor-levels th {
+	background: none !important; /*why important?*/
+}
 /* @end */
 
 @media (min-width: 30rem) {
@@ -257,6 +251,19 @@ tr.divider td {
 		display: none;
 	}
 }
+
+/* @end */
+
+/* @group why-sponsor */
+.why-sponsor ol {
+	margin-top:		1.5rem;
+	padding-left:	0.25rem;
+	padding-right:	1.25rem;
+	}
+.why-sponsor li {
+	margin-bottom:	1rem;
+	margin-left:	1rem;
+	}
 
 /* @end */
 
