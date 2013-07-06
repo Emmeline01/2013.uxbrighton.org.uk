@@ -7,6 +7,19 @@ body {
 	background-color: #fafafa;
 }
 
+@media (min-width: 50rem) {
+	body {
+		font-size: 16px;
+		margin-bottom: 1.5rem !important;
+	}
+}
+
+@media (min-width: 100rem) {
+	body {
+		font-size: 18px;
+	}
+}
+
 h1, h2, h3 {
 	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
 	font-weight: 500;
@@ -18,18 +31,15 @@ h2 {
 }
 h3 {
 	color: #fd9f44;
+	margin-top: 0;
 }
 abbr {
 	border: none !important; /*why’s important required?*/
 }
-hr {
-	border: none;
-	border-top: 1px solid rgba(0,0,0,0.1);
-	margin: 1rem -1rem;
+p {
+	text-align: left;
 }
-th[scope="column"] {
-	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
-}
+/* @group Tables */
 td, th {
 	vertical-align: top;
 	padding: 0.5rem;
@@ -37,13 +47,13 @@ td, th {
 thead th {
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-th * {
-	float: inherit !important;
-}
 td:last-child,
 th:last-child {
 	padding-right: 0;
 }
+
+
+/* @end */
 section, footer {
 	padding: 1rem;
 	margin: 0 -1rem;
@@ -51,37 +61,114 @@ section, footer {
 }
 section {
 	border-top: 1px solid rgba(0,0,0,0.05) !important;
-}
-.thing {
-	font-style: italic;
+	text-align: center;
 }
 
-@media (min-width: 30rem) {
-	.widow {
+@media print {
+	/*maybe these should get moved to the sections too*/
+	section {
+		page-break-after:always;
+	}
+	section:last-child {
+		page-break-after:avoid;
+	}
+	.print-control {
+		display: none;
+	}
+	.sponsor-call-to-action {
+		text-align: center !important;
+		width: 100%;
+	}
+	.sponsor-call-to-action * {
+		text-align: center !important;
+	}
+	th, td {
+		padding: 0.5rem !important;
+		font-size: 11pt;
+	}
+	.demographics {
+		font-size: 9pt;
+	}
+	.demographics h3,
+	.demographics li,
+	.demographics .markets li,
+	.demographics .companies li {
+		text-align: left !important;
+	}
+	.demographics li {
 		white-space: nowrap;
+	}
+	.demographics div {
+		display: inline-block;
+		width: 14rem;
+		vertical-align: top;
+	}
+	.demographics .value {
+		width: 2rem !important;
+	}
+	footer {
+		display: none;
 	}
 }
 
+.thing {
+	font-style: italic;
+}
+ul, ol, li {
+	text-align: left;
+}
+/* @group Text fixes */
+
+.widow {
+	white-space: nowrap;
+}
+.long {
+	display: none;
+}
+/* @end */
+
+/*↓ Modules all the way down*/
 /* @group sponsor-call-to-action */
 
 .sponsor-call-to-action {
 	background: #ffa039;
-	padding: 0.1rem 1rem;
+	padding: 0.1rem 2rem;
 	line-height: 1.5;
-	text-align: center;
 	margin-left: -1rem;
 	margin-right: -1rem;
+}
+.sponsor-call-to-action p {
+	text-align: center;	
 }
 .sponsor-call-to-action .avatar {
 	display: none;
 }
 .sponsor-call-to-action a {
-	color: white;
-	font-weight: normal;
+	color: black;
+	/*font-weight: bold;*/
+	text-decoration: underline !important;
 	text-decoration: none;
-	letter-spacing: 0.05rem;
+}
+@media (max-width: 400px) {
+	/*call button on mobile*/
+	.sponsor-call-to-action a[href^="tel:"] {
+		display: block;
+		background: rgba(254,255,255,0.71);
+		color: rgba(0,0,0,0.8);
+		margin: 0.5rem;
+		font-weight: bold;
+		max-width: 10rem;
+		width: 10rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0.5rem inherit;
+		border-radius: 0.25rem;
+		text-decoration: none !important;
+		box-shadow: 0 0.1rem 0.1rem rgba(0,0,0,0.2);
+	}
 }
 @media (min-width: 30rem) {
+	/*hide all but the first call to action*/
 	.sponsor-call-to-action {
 		display: none;
 	}
@@ -96,17 +183,13 @@ section {
 	}
 }
 /* @end */
-@media (min-width: 1000px) {
-	body {
-		font-size: 16px;
-		margin-bottom: 1.5rem !important;
-	}
-}
 /* @group fronticepiece */
 .frontispiece‎ {
 	background-color: black;
 	margin-top: -1rem;
 	text-align: center;
+	position: relative;
+	z-index: 2;
 }
 .uxbrighton2013-logo {
 	width: 15rem;
@@ -129,11 +212,11 @@ section {
 .be-a-sponsor {
 	color: #ffa039;
 	font-size: 2rem;
-	margin-top: 	-1rem;
-	margin-bottom:	2rem;
+	margin-top: -1rem;
+	margin-bottom: 2rem;
 }
 
-@media (min-height: 349px) {
+@media (min-height: 20rem) {
 	.uxbrighton2013-logo {
 		margin-top: 4rem;
 	}
@@ -147,7 +230,33 @@ section {
 	}
 }
 /* @end */
-
+@media (min-height: 30rem) {
+	.uxbrighton2013-logo {
+		margin-top: 6rem;
+	}
+	.frontispiece‎ .tagline {
+		margin-top: 1.5rem;
+	}
+	.be-a-sponsor {
+		font-size: 3.5rem;
+		margin-top: 	4.5rem;
+		margin-bottom:	4.5rem;
+	}
+}
+@media (min-height: 30rem) {
+	.uxbrighton2013-logo {
+		margin-top: 6rem;
+	}
+	.frontispiece‎ .tagline {
+		margin-top: 1.5rem;
+	}
+	.be-a-sponsor {
+		font-size: 3.5rem;
+		margin-top: 	4.5rem;
+		margin-bottom:	4.5rem;
+	}
+}
+/* @end */
 /* @group sponsor-levels */
 .sponsor-levels {
 	border-top: 1px solid rgba(0,0,0,0.25);
@@ -161,6 +270,9 @@ section {
 }
 .sponsor-level-heading {
 	font-size: 1rem;
+	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
+	font-weight: 500;
+
 	padding: 0.5rem;
 	font-weight: 500;
 	}
@@ -179,9 +291,6 @@ section {
 .sponsor-levels .extras {
 	margin-top: 2rem;
 	}
-.sponsor-levels .price {
-	float: right;
-	}
 .sponsor-levels p {
 	color: rgba(0,0,0,0.33);
 	font-weight: bold;
@@ -189,11 +298,34 @@ section {
 	text-align: center;
 	line-height: 1.3;
 	}
-/* @group Lists */
+.n, .price {
+	margin-left: 0.5rem;
+}
+/*list or table for sponsor levels*/
+@media (min-width: 30rem) {
+	.sponsor-levels-as-table {
+		display: inline-block;
+	}
+	.sponsor-levels-as-lists {
+		display: none;
+	}
+}
 
+/* @group Lists */
+.sponsor-levels {
+	text-align: center;
+}
+.sponsor-levels div {
+	max-width: 52.5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
 .sponsor-levels ul {
 	list-style-type: none;
 	padding-left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 23rem;
 }
 .sponsor-levels li {
 	margin-bottom: 0.25rem;
@@ -201,15 +333,20 @@ section {
 .sponsor-levels li:before {
 	content: "✔";
 	display: inline-block;
-	width: 1.5rem;
+	width: 1rem;
 	text-align: right;
-	padding-right: 1rem;
-	color: #0b8ac1;
+	padding-right: 0.5rem;
+	color: rgba(0,0,0,0.82);
 }
 .sponsor-lelevs-as-lists .n {
 	margin-right: 1rem;
 }
-
+.sponsor-levels-as-lists h3 {
+	text-align: left;
+}
+.sponsor-levels-as-lists h3 .price {
+	float: right;
+}
 /* @end */
 
 /* @group Table */
@@ -220,13 +357,10 @@ section {
 .sponsor-levels td {
 	text-align: center;
 	font-weight: bold;
-	/*color: #c90039; red on white ticks
-	background-color: #fefffe;*/
 }
 .sponsor-levels th[scope=row] {
 	font-weight: inherit;
 	text-align: left;
-	background-color: #fefffe;
 }
 .sponsor-levels th.sponsor-level-heading {
 	min-width: 5rem;
@@ -243,23 +377,20 @@ tr.divider td {
 }
 /* @end */
 
-@media (min-width: 30rem) {
-	.sponsor-levels-as-table {
-		display: block;
-	}
-	.sponsor-levels-as-lists {
-		display: none;
-	}
-}
-
 /* @end */
 
 /* @group why-sponsor */
 .why-sponsor ol {
 	margin-top:		1.5rem;
-	padding-left:	0.25rem;
+	padding-left:	3rem;
 	padding-right:	1.25rem;
 	}
+.why-sponsor ol,
+.why-sponsor p {
+	max-width: 55rem;
+	margin-left: auto;
+	margin-right: auto;
+}
 .why-sponsor li {
 	margin-bottom:	1rem;
 	margin-left:	1rem;
@@ -267,11 +398,10 @@ tr.divider td {
 
 /* @end */
 
-@media (min-width: 1000px) { /*put sponsor levels beside reasons to sponsor*/
+/*sponsor levels BESIDE reasons to sponsor*/
+/*@media (min-width: 50rem) { 
 	section.why-sponsor {
-		width: 30%;
 		padding: 4rem;
-		float: left;
 		margin-right: 0;
 	}
 	section.why-sponsor h2,
@@ -287,7 +417,7 @@ tr.divider td {
 		display: inline-block;
 		margin-left: 0;
 	}
-}
+}*/
 
 /* @group demographics */
 
@@ -308,7 +438,6 @@ tr.divider td {
 	list-style-type: none;
 }
 .demographics ul > ul {
-	/*padding-left: 3rem !important; why’s important required?*/
 	color: rgba(0,0,0,0.5);
 	display: inline;
 }
@@ -327,47 +456,27 @@ tr.divider td {
 .demographics ul {
 	margin-top: 0;
 }
-.demographics .markets,
-.demographics .companies {
+.demographics .markets li,
+.demographics .companies li {
 	text-align: center;
 }
-/*.demographics .markets,
-.demographics .companies {
-	float: left;
-	width: 50%;
-}*/
-/*Clearfix hack that doesn’t seem to work*/
-/*.markets:after {
-  content: "";
-  display: table;
-  clear: both;
-}*/
-@media (min-width: 500px) {
-	.demographics h3 {
+
+@media (min-width: 71rem) {
+	.demographics h3,
+	.demographics li {
 		text-align: left;
-	}
-	.demographics .value {
-		width: 4rem;
-	}
-	.demographics .markets,
-	.demographics .companies {
-		text-align: left;
-	}
 }
-@media (min-width: 1000px) {
 	.demographics div {
 		display: inline-block;
-		width: 18rem;
+		width: 17rem;
 		vertical-align: top;
 	}
 	.demographics .value {
-		width: 3rem;
+		width: 2rem;
 	}
-	.demographics > span {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1200px;
+	.demographics .markets li,
+	.demographics .companies li {
+		text-align: left;
 	}
 }
 /* @end */
@@ -389,29 +498,25 @@ tr.divider td {
 	border-top: 1px solid rgba(0,0,0,0.25);
 	padding: 1rem;
 	margin: -1rem;
-	text-align: center;
 }
 blockquote {
-	margin-right: 0;
 	margin-left: 1.25rem;
 	margin-right: 1.25rem;
 	text-align: left;
-		max-width: 30rem;
-		display: inline-block;
-		vertical-align: top;
-
+	max-width: 25rem;
+	display: inline-block;
+	vertical-align: top;
 }
 cite {
 	margin-bottom: 1rem;
 	display: inline-block;
 	font-style: normal;
+	font-weight: 500;
+	color: #ffa039;
 }
 cite:before {
 	content: "—";
 	width: 1.25rem;
-}
-.long {
-	display: none;
 }
 
 /* @group footer */
