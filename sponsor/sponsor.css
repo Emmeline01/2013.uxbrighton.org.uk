@@ -19,7 +19,6 @@ body {
 		font-size: 18px;
 	}
 }
-
 h1, h2, h3 {
 	font-family: "museo-slab", Rockwell, "American Typewriter", sans-serif;
 	font-weight: 500;
@@ -197,17 +196,17 @@ ul, ol, li {
 	margin-right: auto;
 	margin-bottom: 0rem;
 }
+.frontispiece‎ .location {
+	color: rgba(11,138,193,0.79);
+	font-size: 0.85rem;
+	text-align: center;
+}
 .frontispiece‎ .tagline {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 	font-weight: 500;
 	line-height: 1.25;
 	color: #0b8ac1;
-}
-.frontispiece‎ .location {
-	color: rgba(11,138,193,0.79);
-	font-size: 0.85rem;
-	display: none;
 }
 .be-a-sponsor {
 	color: #ffa039;
